@@ -1,0 +1,11 @@
+<plugin name='plugin-config' version='0.2.0' grailsVersion='2.0 &gt; *'>
+  <author>Daniel Henrique Alves Lima</author>
+  <authorEmail>email_daniel_h@yahoo.com.br</authorEmail>
+  <title>Grails Plugin Config Plugin</title>
+  <description>Simplifies plugin configuration tasks</description>
+  <documentation>http://grails.org/plugin/plugin-config</documentation>
+  <type>PluginConfigGrailsPlugin</type>
+  <resources>
+    <resource>PluginConfigDefaultConfig</resource>
+  </resources>
+</plugin>
