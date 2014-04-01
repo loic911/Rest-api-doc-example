@@ -7,9 +7,16 @@ class UrlMappings {
             }
         }
 
-        //lets say, I want to have /author/id/book.json (same as book.json?author=id
-        "/author/$id/book.$format"(controller:"book"){
-            action = [GET: "listByAuthor"]
+
+        //Only define rules for books, rules for author used Grails auto urlmapping builder
+        "/api/book.$format"(controller:"book"){
+            action = [POST:"save"]
+        }
+        "/api/book/$id.$format"(controller:"book"){
+            action = [GET:"show",PUT:"update", DELETE:"delete"]
+        }
+        "/api/author/$id/book.$format"(controller:"book"){
+            action = [GET:"listByAuthor"]
         }
 
         "/"(view:"/index")

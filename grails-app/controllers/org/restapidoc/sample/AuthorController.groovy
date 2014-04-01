@@ -7,6 +7,7 @@ import org.restapidoc.annotation.RestApiParams
 import org.restapidoc.annotation.RestApiResponseObject
 import org.restapidoc.annotation.RestApi
 import org.restapidoc.pojo.RestApiParamType
+import org.restapidoc.pojo.RestApiVerb
 
 
 @RestApi(name = "author services", description = "Methods for managing authors")
@@ -41,7 +42,7 @@ class AuthorController {
         render (Author.list([max:params.max]) as JSON).toString()
     }
 
-    @RestApiMethod(description="Get stats data for an author")
+    @RestApiMethod(description="Get stats data for an author", path="/a_custom_path/{max}.{json}", verb = RestApiVerb.PUT) //path and verb are stupid...just for the example...
         @RestApiParams(params=[
         @RestApiParam(name="max", type="int", paramType = RestApiParamType.PATH, description = "Max number of author to retrieve")
     ])
