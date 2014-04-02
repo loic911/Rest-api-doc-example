@@ -122,12 +122,33 @@ log4j = {
 }
 
 
-//grails.restapidoc.docVersion = "0.2"
 grails.plugins.restapidoc.basePath = "http://localhost:8080/RestApiDoc-example"
 grails.plugins.restapidoc.customClassName = "org.restapidoc.CustomResponseDoc"
 
 grails.plugins.restapidoc.defaultObjectFields = [
         [name:"id", type:"Long"]
+]
+
+grails.plugins.restapidoc.defaultErrorAll = [
+        "400": "Bad Request: missing parameters or bad message format",
+        "401": "Unauthorized: must be auth",
+        "403": "Forbidden: role error",
+        "404": "Object not found"
+]
+
+grails.plugins.restapidoc.defaultErrorGet = [
+        "400": "Bad Request: missing parameters or bad message format",
+        "401": "Unauthorized: must be auth",
+        "403": "Forbidden: role error",
+        "404": "Object not found"
+]
+
+grails.plugins.restapidoc.defaultErrorPost = [
+        "409": "Object already exist"
+]
+
+grails.plugins.restapidoc.defaultErrorPut = [
+        "409": "Object already exist"
 ]
 
 //grails {
