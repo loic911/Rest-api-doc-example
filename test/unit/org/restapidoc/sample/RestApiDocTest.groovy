@@ -62,7 +62,7 @@ class RestApiDocTest extends GroovyTestCase {
 
         def stats = json.objects.find{it.name.equals("[stats]")}
         assertNotNull(stats)
-        checkField(stats.fields,"fullname",["description":"The author fullname","useForCreation":false])
+        checkField(stats.fields,"fullname",["description":"The autho fullname","useForCreation":false])
         assertNull("Field id must be by default ONLY on grails domain, not on custom response",stats.fields.find{it.name.equals("id")})
     }
 
