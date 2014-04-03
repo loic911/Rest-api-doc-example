@@ -41,6 +41,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../RestApiDoc/grails-app/services" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../RestApiDoc/grails-app/taglib" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../RestApiDoc/target/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/../RestApiDoc/target/test-classes" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
