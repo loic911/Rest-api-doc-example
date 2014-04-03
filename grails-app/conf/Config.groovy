@@ -103,6 +103,10 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
+
+
+
+
     appenders {
         console name: 'stdout', layout: pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss,SSS} %5p %c{1} - %m%n')
     }
@@ -120,6 +124,16 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+environments {
+    test {
+        grails.plugins.restapidoc.outputFile = "restapidoctest.json"
+    }
+}
+
+
+
 
 
 grails.plugins.restapidoc.basePath = "http://localhost:8080/RestApiDoc-example"
