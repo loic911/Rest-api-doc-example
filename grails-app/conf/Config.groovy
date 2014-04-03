@@ -126,14 +126,6 @@ log4j = {
 }
 
 
-environments {
-    test {
-        grails.plugins.restapidoc.outputFile = "restapidoctest.json"
-    }
-}
-
-
-
 
 
 grails.plugins.restapidoc.basePath = "http://localhost:8080/RestApiDoc-example"
