@@ -228,3 +228,4 @@ grails.plugins.restapidoc.defaultErrorPut = [
 //    }
 //}
 
+grails.views.gsp.encoding="UTF-8"
