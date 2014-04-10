@@ -7,7 +7,7 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
 
-grails.plugin.location.restapidoc = "../RestApiDoc"
+//grails.plugin.location.restapidoc = "../RestApiDoc"
 
 
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
@@ -60,6 +60,8 @@ grails.project.dependency.resolution = {
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.50"
+
+        compile ":rest-api-doc:0.1"
 
         // plugins for the compile step
         compile ":scaffolding:2.0.1"

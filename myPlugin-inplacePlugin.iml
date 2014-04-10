@@ -45,7 +45,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="RestApiDoc-example-grailsPlugins" />
     <orderEntry type="library" scope="PROVIDED" name="grails-2.3.5" level="application" />
     <orderEntry type="module-library">
       <library name="Grails User Library (myPlugin-inplacePlugin)">
@@ -99,6 +98,7 @@
         <jarDirectory url="file://$MODULE_DIR$/../RestApiDoc/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="myPlugin-inplacePlugin-grailsPlugins" />
   </component>
 </module>
 

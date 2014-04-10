@@ -71,7 +71,7 @@ class RestApiDocTest extends GroovyTestCase {
         assertNotNull("$fieldName cannot be null",field)
 
         propertyToCheck.each {
-            assertEquals("check field ${fieldName} with property ${it.key}",field[it.key],it.value)
+            assertEquals("check field ${fieldName} with property ${it.key}",it.value,field[it.key])
         }
     }
 
