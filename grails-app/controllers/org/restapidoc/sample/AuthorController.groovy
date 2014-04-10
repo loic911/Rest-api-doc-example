@@ -1,6 +1,9 @@
 package org.restapidoc.sample
 
 import grails.converters.JSON
+import org.restapidoc.annotation.RestApiBodyObject
+import org.restapidoc.annotation.RestApiError
+import org.restapidoc.annotation.RestApiErrors
 import org.restapidoc.annotation.RestApiMethod
 import org.restapidoc.annotation.RestApiParam
 import org.restapidoc.annotation.RestApiParams
@@ -46,7 +49,11 @@ class AuthorController {
         @RestApiParams(params=[
         @RestApiParam(name="max", type="int", paramType = RestApiParamType.PATH, description = "Max number of author to retrieve")
     ])
+    @RestApiBodyObject(name = "nothing")
     @RestApiResponseObject(objectIdentifier = "[stats]")
+    @RestApiErrors(apierrors=[
+        @RestApiError(code="400",description="A custom error!")
+    ])
     def stats() {
         def author = Author.read(params.id)
         render ([fullname:author + " " + author.lastname, numberOfBook: author.book.size()] as JSON).toString()

@@ -61,7 +61,8 @@ grails.project.dependency.resolution = {
         // plugins for the build system only
         build ":tomcat:7.0.50"
 
-        compile ":rest-api-doc:0.1"
+        compile ":rest-api-doc:0.1.1"
+
 
         // plugins for the compile step
         compile ":scaffolding:2.0.1"
