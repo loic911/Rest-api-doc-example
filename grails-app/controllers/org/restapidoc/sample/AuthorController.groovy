@@ -22,6 +22,7 @@ class AuthorController {
 //        return "Author"
 //    }
 
+
     @RestApiMethod(description="Get an author")
     @RestApiParams(params=[
         @RestApiParam(name="id", type="long", paramType = RestApiParamType.PATH, description = "The author id")
