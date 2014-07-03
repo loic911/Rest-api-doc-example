@@ -16,12 +16,7 @@ import org.restapidoc.pojo.RestApiVerb
 @RestApi(name = "author services", description = "Methods for managing authors")
 class AuthorController {
 
-    //If AuthorController was called FooController, you must implement this method to return the domain name (Author)
-    //    def currentDomainName() {
-
-//        return "Author"
-//    }
-
+    //This is a demo for more advanced doc description. Look to BookController for a basic and simple doc
 
     @RestApiMethod(description="Get an author")
     @RestApiParams(params=[
@@ -46,7 +41,7 @@ class AuthorController {
         render (Author.list([max:params.max]) as JSON).toString()
     }
 
-    @RestApiMethod(description="Get stats data for an author", path="/a_custom_path/{max}.{json}", verb = RestApiVerb.PUT) //path and verb are stupid...just for the example...
+    @RestApiMethod(description="Get stats data for an author", path="/a_custom_path/{max}.json", verb = RestApiVerb.PUT) //path and verb are stupid...just for the example...
         @RestApiParams(params=[
         @RestApiParam(name="max", type="int", paramType = RestApiParamType.PATH, description = "Max number of author to retrieve")
     ])
@@ -58,5 +53,13 @@ class AuthorController {
     def stats() {
         def author = Author.read(params.id)
         render ([fullname:author + " " + author.lastname, numberOfBook: author.book.size()] as JSON).toString()
+    }
+
+    @RestApiMethod(description="Get author avatar", listing = true, extensions = ["jpg","png"])
+    @RestApiParams(params=[
+        @RestApiParam(name="id", type="long", paramType = RestApiParamType.PATH, description = "The author id")
+    ])
+    def avatar() {
+
     }
 }

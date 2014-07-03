@@ -23,7 +23,7 @@ class RestApiDocTest extends GroovyTestCase {
 
     public void testHeaders() {
         assertEquals("http://localhost:8080/RestApiDoc-example",json.basePath)
-        assertEquals("0.1",json.version)
+        assertEquals("0.1.1",json.version)
     }
 
     public void testObjects() {
