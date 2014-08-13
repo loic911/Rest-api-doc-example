@@ -7,6 +7,11 @@ class BootStrap {
     def grailsApplication
 
     def init = { servletContext ->
+
+        String restapidocPath = new File("restapidoc.json").absolutePath
+
+        println "The file restapidoc.json should be located in ${restapidocPath}"
+
         Author author1 = new Author(firstname: "Burt", lastname: "Beckwith")
         author1.save(failOnError: true)
         Author author2 = new Author(firstname: "Martin", lastname: "Fowler")

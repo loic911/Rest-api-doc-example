@@ -55,11 +55,22 @@ class AuthorController {
         render ([fullname:author + " " + author.lastname, numberOfBook: author.book.size()] as JSON).toString()
     }
 
-    @RestApiMethod(description="Get author avatar", listing = true, extensions = ["jpg","png"])
+    @RestApiMethod(description="Get author avatar", extensions = ["jpg","png"])
     @RestApiParams(params=[
-        @RestApiParam(name="id", type="long", paramType = RestApiParamType.PATH, description = "The author id")
+        @RestApiParam(name="id", type="long", paramType = RestApiParamType.PATH, description = "The author id"),
+        @RestApiParam(name="size", type="long", paramType = RestApiParamType.QUERY, description = "Width size for avatar")
     ])
     def avatar() {
+
+    }
+
+    @RestApiMethod(description="Get a authors with this lastname and firstname")
+    @RestApiParams(params=[
+    @RestApiParam(name="lastname",  paramType = RestApiParamType.PATH, description = "The lastname criteria"),
+    @RestApiParam(name="firstname", type = "String",  paramType = RestApiParamType.PATH, description = "The lastname criteria"),
+    @RestApiParam(name="age", paramType = RestApiParamType.PATH, description = "The lastname criteria")
+    ])
+    def search(String lastname,String firstname, Integer age) {
 
     }
 }
