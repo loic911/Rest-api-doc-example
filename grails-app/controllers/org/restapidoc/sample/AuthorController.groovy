@@ -73,4 +73,15 @@ class AuthorController {
     def search(String lastname,String firstname, Integer age) {
 
     }
+
+    @RestApiMethod(description="Generic query on an ",verb = RestApiVerb.POST)
+    @RestApiParams(params=[
+        @RestApiParam(name="max", type="long", paramType = RestApiParamType.QUERY, description = "The object id"),
+        @RestApiParam(name="offfset", type="long", paramType = RestApiParamType.QUERY, description = "The object id"),
+        @RestApiParam(name="order", type="string", paramType = RestApiParamType.QUERY, description = "The object id",allowedvalues=['asc','desc']),
+        @RestApiParam(name="sort", type="string", paramType = RestApiParamType.QUERY, description = "The object id")
+    ])
+    def issue32() {
+
+    }
 }

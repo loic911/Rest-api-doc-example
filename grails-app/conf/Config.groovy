@@ -127,7 +127,8 @@ log4j = {
 }
 
 
-
+grails.plugins.restapidoc.outputFileGeneration = "restapidoc.json"
+grails.plugins.restapidoc.outputFileReading = "restapidoc.json"
 
 grails.plugins.restapidoc.basePath = "http://localhost:8080/RestApiDoc-example"
 grails.plugins.restapidoc.customClassName = "org.restapidoc.CustomResponseDoc"
