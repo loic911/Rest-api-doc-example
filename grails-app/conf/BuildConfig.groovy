@@ -62,8 +62,9 @@ grails.project.dependency.resolution = {
 //        build ":tomcat:7.0.50"
 
        // compile ":rest-api-doc:0.3.1"
+        //compile ":rest-api-doc:0.4.1"
         build ':tomcat:7.0.54'
-        compile (':hibernate4:4.3.5.5')
+        runtime ':hibernate4:4.3.6.1'
 
 
         compile ':cache:1.1.7'
