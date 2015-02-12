@@ -6,10 +6,6 @@ grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
-
-grails.plugin.location.restapidoc = "../restapidoc"
-
-
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 grails.project.fork = [
@@ -59,29 +55,22 @@ grails.project.dependency.resolution = {
 
     plugins {
         // plugins for the build system only
-//        build ":tomcat:7.0.50"
-
-       // compile ":rest-api-doc:0.3.1"
-        //compile ":rest-api-doc:0.4.1"
+        compile ":rest-api-doc:0.6.2"
         build ':tomcat:7.0.54'
         runtime ':hibernate4:4.3.6.1'
 
-
         compile ':cache:1.1.7'
-        compile ':scaffolding:2.1.2'
-        compile ':asset-pipeline:1.9.6'
+        // compile ':scaffolding:2.1.2'
+        // compile ':asset-pipeline:1.9.6'
         // plugins for the compile step
 //        compile ":scaffolding:2.0.1"
 //        compile ':cache:1.1.1'
 
         // plugins needed at runtime but not for compilation
-//        runtime ":hibernate:3.6.10.7" // or ":hibernate4:4.1.11.6"
+        // runtime ":hibernate:3.6.10.16" // or ":hibernate4:4.1.11.6"
         runtime ":database-migration:1.3.8"
         //runtime ":jquery:1.10.2.2"
         runtime ":resources:1.2.8"
-
-
-
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
