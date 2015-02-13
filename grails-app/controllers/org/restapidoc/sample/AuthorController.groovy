@@ -84,4 +84,10 @@ class AuthorController {
     def issue32() {
 
     }
+
+
+    @RestApiMethod(description="Test an issue",verb = RestApiVerb.ALL)
+    def anotherIssue() {
+
+    }
 }
