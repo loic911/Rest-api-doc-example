@@ -27,7 +27,7 @@ class AuthorController {
         def author = Author.read(params.id)
         if (!author) {
 			response.status = 404
-            render "Not Found!"
+            render([] as JSON).toString()
         } else {
             render (author as JSON).toString()
         }
@@ -35,7 +35,7 @@ class AuthorController {
 
     @RestApiMethod(description="List all authors", listing = true)
     @RestApiParams(params=[
-        @RestApiParam(name="max", type="int", paramType = RestApiParamType.PATH, description = "Max number of author to retrieve")
+        @RestApiParam(name="max", type="int", paramType = RestApiParamType.QUERY, description = "Max number of author to retrieve")
     ])
     def list() {
         render (Author.list([max:params.max]) as JSON).toString()
@@ -50,9 +50,23 @@ class AuthorController {
     @RestApiErrors(apierrors=[
         @RestApiError(code="400",description="A custom error!")
     ])
+    def someCustomPath() {
+        render([] as JSON).toString()
+    }
+
+    @RestApiMethod(description="Get author stats")
+    @RestApiParams(params=[
+            @RestApiParam(name="id", type="long", paramType = RestApiParamType.QUERY, description = "The author id")
+    ])
     def stats() {
         def author = Author.read(params.id)
-        render ([fullname:author + " " + author.lastname, numberOfBook: author.book.size()] as JSON).toString()
+
+        if (!author) {
+            response.status = 404
+            render([] as JSON).toString()
+        } else {
+            render ([fullname:author.firstname + " " + author.lastname, numberOfBook: author.book?.size()] as JSON).toString()
+        }
     }
 
     @RestApiMethod(description="Get author avatar", extensions = ["jpg","png"])
@@ -61,17 +75,23 @@ class AuthorController {
         @RestApiParam(name="size", type="long", paramType = RestApiParamType.QUERY, description = "Width size for avatar")
     ])
     def avatar() {
-
+        render([] as JSON).toString()
     }
 
     @RestApiMethod(description="Get a authors with this lastname and firstname")
     @RestApiParams(params=[
-    @RestApiParam(name="lastname",  paramType = RestApiParamType.PATH, description = "The lastname criteria"),
-    @RestApiParam(name="firstname", type = "String",  paramType = RestApiParamType.PATH, description = "The lastname criteria"),
-    @RestApiParam(name="age", paramType = RestApiParamType.PATH, description = "The lastname criteria")
+    @RestApiParam(name="lastname",  paramType = RestApiParamType.QUERY, description = "The lastname criteria"),
+    @RestApiParam(name="firstname", type = "String",  paramType = RestApiParamType.QUERY, description = "The lastname criteria")
     ])
-    def search(String lastname,String firstname, Integer age) {
+    def search() {
+        def authors = Author.withCriteria {
+            or {
+                like('firstname', ('%' + params.firstname + '%'))
+                like('lastname', ('%' + params.lastname + '%'))
+            }
+        }
 
+        render(authors as JSON).toString()
     }
 
     @RestApiMethod(description="Generic query on an ",verb = RestApiVerb.POST)
@@ -82,6 +102,6 @@ class AuthorController {
         @RestApiParam(name="sort", type="string", paramType = RestApiParamType.QUERY, description = "The object id")
     ])
     def issue32() {
-
+        render([] as JSON).toString()
     }
 }

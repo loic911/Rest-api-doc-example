@@ -6,16 +6,41 @@
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "4e491578-0584-43ca-9165-645699b5d6d6",
+               "jsondocId": "aa401ad8-de25-44b1-ad54-365a7711f0fe",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "db555891-1050-4223-803f-4f67f9ad54bf",
+                  "jsondocId": "a14ddd13-dd75-4380-87a7-3f0d2abf10c2",
                   "mapValueObject": "",
                   "object": "author"
                },
-               "pathparameters": [{
-                  "jsondocId": "62c8fa64-127e-4ea6-992f-5032f77c3348",
+               "pathparameters": [],
+               "apierrors": [
+                  {
+                     "jsondocId": "198da519-0182-4c33-ac2f-4c26bfff375e",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "257f8845-f20c-4896-b5a1-143703595a27",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "ce2617c6-9459-4e09-b736-e08e8caad179",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "fead57c3-371a-45ee-b05e-ff87ed820f3e",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "List all authors",
+               "queryparameters": [{
+                  "jsondocId": "ff7673a0-3d29-4695-a1ce-5787213a9712",
                   "description": "Max number of author to retrieve",
                   "name": "max",
                   "allowedvalues": [],
@@ -23,31 +48,6 @@
                   "required": "true",
                   "type": "int"
                }],
-               "apierrors": [
-                  {
-                     "jsondocId": "207e452f-3943-41d2-955d-8e5e8dce6767",
-                     "description": "Bad Request: missing parameters or bad message format",
-                     "code": "400"
-                  },
-                  {
-                     "jsondocId": "c066e47e-57f0-4bd4-9e54-4224bd9e1ba0",
-                     "description": "Unauthorized: must be auth",
-                     "code": "401"
-                  },
-                  {
-                     "jsondocId": "dfbd0b72-86c0-4a58-8fc6-9a3c78abbf34",
-                     "description": "Forbidden: role error",
-                     "code": "403"
-                  },
-                  {
-                     "jsondocId": "2af7779f-fced-4a07-bd4a-c559de6b55d8",
-                     "description": "Object not found",
-                     "code": "404"
-                  }
-               ],
-               "verb": "GET",
-               "description": "List all authors",
-               "queryparameters": [],
                "path": "/author/list.json",
                "produces": ["application/json"],
                "methodName": "list"
@@ -55,17 +55,42 @@
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "1586b98c-e9da-433c-85c7-218f27bdd209",
+               "jsondocId": "ef9962cb-9837-465c-83d6-f4116a8ffb9d",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "ed63b036-710c-43a8-9d93-6174c85a392b",
+                  "jsondocId": "66e44594-8d44-4293-9100-cd3095fd1c0b",
                   "mapValueObject": "",
                   "object": "author"
                },
-               "pathparameters": [
+               "pathparameters": [],
+               "apierrors": [
                   {
-                     "jsondocId": "d77915bb-8779-404a-a393-6b437cd6c1b7",
+                     "jsondocId": "c9722bd4-02c4-4988-88df-00a2b217d6b2",
+                     "description": "Bad Request: missing parameters or bad message format",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "6985c3c1-c578-49be-981c-2c1cbd914a82",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "eb23d0de-f76c-48e3-be02-bb79d9a5e8c9",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "840fe417-4334-4ebd-b841-7a39abf3c73c",
+                     "description": "Object not found",
+                     "code": "404"
+                  }
+               ],
+               "verb": "GET",
+               "description": "Get a authors with this lastname and firstname",
+               "queryparameters": [
+                  {
+                     "jsondocId": "c86a3cbe-58a1-4378-bfb3-ea173d444263",
                      "description": "The lastname criteria",
                      "name": "lastname",
                      "allowedvalues": [],
@@ -74,127 +99,81 @@
                      "type": ""
                   },
                   {
-                     "jsondocId": "9211fa2d-a3fd-451e-85ce-50435e1e72a6",
+                     "jsondocId": "dbb31e48-bc71-46ff-8674-13e85b91ca6c",
                      "description": "The lastname criteria",
                      "name": "firstname",
                      "allowedvalues": [],
                      "format": "",
                      "required": "true",
                      "type": "String"
-                  },
-                  {
-                     "jsondocId": "d2e0ece6-8a23-491f-a141-5a3948f1e0bb",
-                     "description": "The lastname criteria",
-                     "name": "age",
-                     "allowedvalues": [],
-                     "format": "",
-                     "required": "true",
-                     "type": ""
                   }
                ],
-               "apierrors": [
-                  {
-                     "jsondocId": "25841820-4613-4df3-8576-3b3134fb951b",
-                     "description": "Bad Request: missing parameters or bad message format",
-                     "code": "400"
-                  },
-                  {
-                     "jsondocId": "492dac4c-59ce-48c9-bbfc-da615a99cc1d",
-                     "description": "Unauthorized: must be auth",
-                     "code": "401"
-                  },
-                  {
-                     "jsondocId": "ee5347ee-fd2f-47d5-a78b-29d8ae4a3efc",
-                     "description": "Forbidden: role error",
-                     "code": "403"
-                  },
-                  {
-                     "jsondocId": "20ed1f1e-94ef-40fd-993d-4cd85b37c383",
-                     "description": "Object not found",
-                     "code": "404"
-                  }
-               ],
-               "verb": "GET",
-               "description": "Get a authors with this lastname and firstname",
-               "queryparameters": [],
                "path": "/author/search.json",
                "produces": ["application/json"],
                "methodName": "search"
             },
             {
                "headers": [],
-               "bodyobject": {
-                  "mapKeyObject": "",
-                  "jsondocId": "87f5e326-4c41-44fd-a9db-a1f61e1c669c",
-                  "mapValueObject": "",
-                  "map": "",
-                  "object": "nothing",
-                  "multiple": "Unknow"
-               },
-               "jsondocId": "fa17c2eb-1967-476e-87d7-41f7363de98f",
-               "consumes": ["application/json"],
+               "bodyobject": null,
+               "jsondocId": "1f7750a6-ffc1-4a0a-8e22-6b3e97d6b156",
+               "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "b2cd815d-18bf-482e-b8b4-118bb453d2ff",
+                  "jsondocId": "821c27d7-75b4-4e0b-ad17-2cb1194b7a80",
                   "mapValueObject": "",
-                  "object": "[stats]"
+                  "object": "author"
                },
-               "pathparameters": [{
-                  "jsondocId": "eeb575f8-7abc-423a-8d96-b6a36d7c9866",
-                  "description": "Max number of author to retrieve",
-                  "name": "max",
-                  "allowedvalues": [],
-                  "format": "",
-                  "required": "true",
-                  "type": "int"
-               }],
+               "pathparameters": [],
                "apierrors": [
                   {
-                     "jsondocId": "ed8e27d7-baee-4b55-a339-493d62b87302",
-                     "description": "A custom error!",
+                     "jsondocId": "b1154602-4b15-4c60-84bc-cd6c5c33c565",
+                     "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "c4a7480b-b350-4aec-84cd-b17944d94639",
+                     "jsondocId": "28ba71e2-36ba-41bf-a3b4-0b5588f634c9",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "7119ad32-e041-4303-b9ef-adf3a080540f",
+                     "jsondocId": "a43db883-3330-4a84-91d0-b3e5c7dbf090",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "f19f301e-784c-41b8-96a1-539bdc2f6f57",
+                     "jsondocId": "28452b4b-0aba-4cf5-911c-9e1ee04519b2",
                      "description": "Object not found",
                      "code": "404"
-                  },
-                  {
-                     "jsondocId": "22c8c07c-6995-4d60-a7ac-3c05350d4081",
-                     "description": "Object already exist",
-                     "code": "409"
                   }
                ],
-               "verb": "PUT",
-               "description": "Get stats data for an author",
-               "queryparameters": [],
-               "path": "/a_custom_path/{max}.json",
+               "verb": "GET",
+               "description": "Get author stats",
+               "queryparameters": [{
+                  "jsondocId": "1043a8a3-ca8f-4b7c-acde-fe1f4fd45b7b",
+                  "description": "The author id",
+                  "name": "id",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "long"
+               }],
+               "path": "/author/stats.json",
                "produces": ["application/json"],
                "methodName": "stats"
             },
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "5dc34432-06bb-4588-9782-13409bd9a571",
+               "jsondocId": "a7b4e7c5-39f6-4983-9894-69db83d4967f",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "6617d76a-5d7b-40b5-8acd-9e975e4625e5",
+                  "jsondocId": "eb575363-3066-43c4-97de-dbce80c388ed",
                   "mapValueObject": "",
                   "object": "author"
                },
                "pathparameters": [{
-                  "jsondocId": "adb869da-4091-40b5-88b8-98eb6038c964",
+                  "jsondocId": "1cc0d519-307c-4fe7-a528-39ad133033dd",
                   "description": "The author id",
                   "name": "id",
                   "allowedvalues": [],
@@ -204,22 +183,22 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "29c3b15b-b530-4e5b-8a6d-516cf0e74f5e",
+                     "jsondocId": "541c0351-0528-4d83-bb16-23acbd6f5c55",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "683731e0-caae-4d16-a71a-ff76dea64161",
+                     "jsondocId": "2b4d5471-cf6a-416e-b6e8-4272b1018e3e",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "f025510a-c724-4b67-b867-69e1cb19fed4",
+                     "jsondocId": "9d034ea3-dc99-4d8e-ac97-5b72f98b7592",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "f5880d7a-26e5-4c11-9b8c-3aa31067493f",
+                     "jsondocId": "eccd7e16-e97e-4215-84f5-73a21a6aa536",
                      "description": "Object not found",
                      "code": "404"
                   }
@@ -233,17 +212,78 @@
             },
             {
                "headers": [],
+               "bodyobject": {
+                  "mapKeyObject": "",
+                  "jsondocId": "a62470a3-7ac2-47c4-a87f-aae31aab9663",
+                  "mapValueObject": "",
+                  "map": "",
+                  "object": "nothing",
+                  "multiple": "Unknow"
+               },
+               "jsondocId": "5d434944-4244-4e88-8671-571c048c02d0",
+               "consumes": ["application/json"],
+               "response": {
+                  "mapKeyObject": "",
+                  "jsondocId": "db302a32-fdb0-400c-9ecb-b263f27c39d0",
+                  "mapValueObject": "",
+                  "object": "[stats]"
+               },
+               "pathparameters": [{
+                  "jsondocId": "a84d6ce1-9042-4d9b-9d3e-4649387f119a",
+                  "description": "Max number of author to retrieve",
+                  "name": "max",
+                  "allowedvalues": [],
+                  "format": "",
+                  "required": "true",
+                  "type": "int"
+               }],
+               "apierrors": [
+                  {
+                     "jsondocId": "f2b0f204-a54f-4990-9e1d-b215bc02cecd",
+                     "description": "A custom error!",
+                     "code": "400"
+                  },
+                  {
+                     "jsondocId": "8ae650da-724f-45cc-8644-4d966c5922ac",
+                     "description": "Unauthorized: must be auth",
+                     "code": "401"
+                  },
+                  {
+                     "jsondocId": "44db026d-bea0-45b2-ba41-b9968f3dc9de",
+                     "description": "Forbidden: role error",
+                     "code": "403"
+                  },
+                  {
+                     "jsondocId": "19bb3586-781f-4478-a83a-35eb59af46c9",
+                     "description": "Object not found",
+                     "code": "404"
+                  },
+                  {
+                     "jsondocId": "24dac43a-4318-4b98-a2ac-feceb23f2f15",
+                     "description": "Object already exist",
+                     "code": "409"
+                  }
+               ],
+               "verb": "PUT",
+               "description": "Get stats data for an author",
+               "queryparameters": [],
+               "path": "/a_custom_path/{max}.json",
+               "produces": ["application/json"],
+               "methodName": "someCustomPath"
+            },
+            {
+               "headers": [],
                "bodyobject": null,
-               "jsondocId": "2e876192-49b9-4ffc-aa41-23d830b614ac",
+               "jsondocId": "6bcb0bd6-82b1-41f6-97db-ffe81135eaf6",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "f787ed8c-92b1-4029-bb3a-3971d14b0cca",
+                  "jsondocId": "82fd3d92-1467-4045-ab19-ffbdedc62c33",
                   "mapValueObject": "",
                   "object": "author"
                },
                "pathparameters": [{
-                  "jsondocId": "38f16422-d69a-4ff7-9ed2-a8af70504443",
+                  "jsondocId": "d4a511a7-ad5a-4ece-9180-46f6e000d265",
                   "description": "The author id",
                   "name": "id",
                   "allowedvalues": [],
@@ -253,22 +293,22 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "1f443a64-2b34-4901-8d3e-7b1200c45ad9",
+                     "jsondocId": "e9882220-8cd6-4d46-ae35-6aa5cb5eba4e",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "29c58cf8-fb1b-4139-90df-da336828a57e",
+                     "jsondocId": "bc5c2b2d-d7ef-4fb7-9793-73a58edd102d",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "589e09dd-876b-4109-a3d3-55ac1e8c8b00",
+                     "jsondocId": "f1212637-27c9-4847-a5bc-24f2fc73b4bf",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "d0484ab7-02a8-459e-b26d-630222d17706",
+                     "jsondocId": "0623a901-eed6-42ef-af1c-420670d05024",
                      "description": "Object not found",
                      "code": "404"
                   }
@@ -276,7 +316,7 @@
                "verb": "GET",
                "description": "Get author avatar",
                "queryparameters": [{
-                  "jsondocId": "8654dcae-3d08-402f-a7c4-de40de08387f",
+                  "jsondocId": "98357627-2b3e-4f18-8ee9-823f1efd346e",
                   "description": "Width size for avatar",
                   "name": "size",
                   "allowedvalues": [],
@@ -291,16 +331,16 @@
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "a3f725f8-f82d-4dc1-b107-1fbca6c95826",
+               "jsondocId": "fde3ae48-00a3-4200-8a6a-4e165439661a",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "3ad12be2-61dc-4da2-8a66-fa874a902449",
+                  "jsondocId": "a91e65f9-3517-47f4-bbcb-8f82eeb5220f",
                   "mapValueObject": "",
                   "object": "author"
                },
                "pathparameters": [{
-                  "jsondocId": "98efe0d4-fd6d-4d31-ae7d-356b44d7dd93",
+                  "jsondocId": "e0b48bf7-3047-4248-ae07-567a80685530",
                   "description": "The author id",
                   "name": "id",
                   "allowedvalues": [],
@@ -310,22 +350,22 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "d159957c-a41b-4b27-a26c-2be88ccaf513",
+                     "jsondocId": "11c07458-1970-48db-ae9a-9346b167054b",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "befb82ce-68a0-4bc9-bfed-97ea6978e3b4",
+                     "jsondocId": "8c3de5bc-0e33-4df6-9cc9-519c533c8d2e",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "8c56b699-54e3-42da-b44b-4ed6e53fa704",
+                     "jsondocId": "19313e77-cf1b-4af5-a1f1-b531b1114df5",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "7b8d5b3c-08a1-4b19-b5e9-7a4c6c0d6453",
+                     "jsondocId": "d6f1abea-2616-4ece-8dc8-9aa544f67e42",
                      "description": "Object not found",
                      "code": "404"
                   }
@@ -333,7 +373,7 @@
                "verb": "GET",
                "description": "Get author avatar",
                "queryparameters": [{
-                  "jsondocId": "2d4ebf82-8480-4264-9d34-f59ea11c671b",
+                  "jsondocId": "59d9a425-e2a4-429d-8f4c-d86a37a685ee",
                   "description": "Width size for avatar",
                   "name": "size",
                   "allowedvalues": [],
@@ -349,44 +389,44 @@
                "headers": [],
                "bodyobject": {
                   "mapKeyObject": "",
-                  "jsondocId": "d6514b61-5c35-441a-8ea5-0236d797a175",
+                  "jsondocId": "45a9383f-ee6b-46c5-bfb4-f3ed0d72d9d3",
                   "mapValueObject": "",
                   "map": "",
                   "object": "author",
                   "multiple": "Unknow"
                },
-               "jsondocId": "d4fd9cd3-7f01-4b45-a0e3-766878799981",
+               "jsondocId": "0c416341-31e5-48d9-a106-7f5995895282",
                "consumes": ["application/json"],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "572fca2a-2f71-4c26-9f1c-51500f692d8a",
+                  "jsondocId": "1fea0d4d-afbb-4d1a-aa51-1794f5151116",
                   "mapValueObject": "",
                   "object": "author"
                },
                "pathparameters": [],
                "apierrors": [
                   {
-                     "jsondocId": "972879c0-d987-4671-b4b2-4319c1a60eda",
+                     "jsondocId": "e66c1155-524b-4eb6-8cfc-c0d152c7f35c",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "825f3bff-a30b-4513-8ba8-62cc3ca55e9e",
+                     "jsondocId": "f7495f95-2d48-428b-b048-4ddf0bfe9132",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "c902541e-0b44-4791-8467-e5cfde07d97c",
+                     "jsondocId": "e049f8b6-602a-4e2d-bd7d-08a52d2bbf74",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "d02f3f3b-d009-44cf-9dab-551709526f5c",
+                     "jsondocId": "bafe5c12-db88-466d-ba8b-504271873d25",
                      "description": "Object not found",
                      "code": "404"
                   },
                   {
-                     "jsondocId": "ae949511-0ff2-4447-b0f6-1b03281f6e79",
+                     "jsondocId": "af9812c6-9583-4a01-8ab8-c12fad499c5f",
                      "description": "Object already exist",
                      "code": "409"
                   }
@@ -395,7 +435,7 @@
                "description": "Generic query on an ",
                "queryparameters": [
                   {
-                     "jsondocId": "c055b025-5c00-4e88-a64e-5ea7f0ac6818",
+                     "jsondocId": "aa569758-76d4-4c32-87fc-3f9b73d5c622",
                      "description": "The object id",
                      "name": "max",
                      "allowedvalues": [],
@@ -404,7 +444,7 @@
                      "type": "long"
                   },
                   {
-                     "jsondocId": "1ffb6112-0174-4a86-8b39-36015c3f045c",
+                     "jsondocId": "3d1420c4-481a-4051-b72b-41bde6bfb538",
                      "description": "The object id",
                      "name": "offfset",
                      "allowedvalues": [],
@@ -413,7 +453,7 @@
                      "type": "long"
                   },
                   {
-                     "jsondocId": "5bfff931-8609-4807-80e4-400709259ef6",
+                     "jsondocId": "06bb3aa2-bc3f-4278-8f48-f0e1374a2b80",
                      "description": "The object id",
                      "name": "order",
                      "allowedvalues": [
@@ -425,7 +465,7 @@
                      "type": "string"
                   },
                   {
-                     "jsondocId": "fe640665-fde2-467e-ad59-aa033a4d3224",
+                     "jsondocId": "d5a165eb-ccfa-4138-8a64-9b5c64bd4e6f",
                      "description": "The object id",
                      "name": "sort",
                      "allowedvalues": [],
@@ -439,7 +479,7 @@
                "methodName": "issue32"
             }
          ],
-         "jsondocId": "9e60514c-9d5f-4276-9cb3-1e96ffee0774",
+         "jsondocId": "ecb46170-ad86-49e4-9e53-74f7c769fc43",
          "description": "Methods for managing authors",
          "name": "author services"
       },
@@ -449,44 +489,44 @@
                "headers": [],
                "bodyobject": {
                   "mapKeyObject": "",
-                  "jsondocId": "6f52bf58-17c0-432e-9a54-1dda623421ed",
+                  "jsondocId": "5df85073-c602-4b3b-9262-cd24454bd870",
                   "mapValueObject": "",
                   "map": "",
                   "object": "book",
                   "multiple": "Unknow"
                },
-               "jsondocId": "5786900c-05f2-45cc-b20c-f729c851009f",
+               "jsondocId": "f80902e8-b97d-4858-b2b9-15bcf0f913f9",
                "consumes": ["application/json"],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "e9de2b4d-a6c2-4402-bfe0-f01dca9553cb",
+                  "jsondocId": "d1c9d707-5c43-4d63-9978-ad857ec48474",
                   "mapValueObject": "",
                   "object": "book"
                },
                "pathparameters": [],
                "apierrors": [
                   {
-                     "jsondocId": "513157ff-bcae-4317-b6e4-eb44630206fa",
+                     "jsondocId": "8d0a7344-d2ef-468c-aab5-642cc7b5e88e",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "1a488ed8-ddd6-4ba6-8d6a-8de30b6f10d5",
+                     "jsondocId": "cd9f181c-fbcf-48a4-8033-3a936a9158ec",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "51615a64-c491-4b5f-aac9-ab658565b66b",
+                     "jsondocId": "0dafbaf9-f7bc-40e8-9811-3817548c95d4",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "ce13a98b-2387-430c-a284-bda2d77f43c4",
+                     "jsondocId": "3cb30d08-b927-4e4f-beb3-fae233c58f09",
                      "description": "Object not found",
                      "code": "404"
                   },
                   {
-                     "jsondocId": "deb2ef51-9f3a-465a-b8fb-c6c84a02ef5c",
+                     "jsondocId": "8388e34b-2035-4f5f-be66-b3be6c553c50",
                      "description": "Object already exist",
                      "code": "409"
                   }
@@ -501,16 +541,16 @@
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "5ff42a47-97bb-4218-a4b5-ff54cdf5c37e",
+               "jsondocId": "235c8a8b-f68a-448c-a8d7-f0f6730f52bb",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "162fbd8c-a685-449a-a74c-4382dcb9389a",
+                  "jsondocId": "3b41c374-4ae8-4be2-94e1-ef71662a5f9e",
                   "mapValueObject": "",
                   "object": "book"
                },
                "pathparameters": [{
-                  "jsondocId": "7002009c-dabc-456b-b104-8c133013febb",
+                  "jsondocId": "3680c2aa-eec6-4bc5-91a8-571f76691b07",
                   "description": "The book id",
                   "name": "id",
                   "allowedvalues": [],
@@ -520,22 +560,22 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "d66aec66-2b80-4520-9f81-a6a25d20757d",
+                     "jsondocId": "9c0f12b5-451b-43cf-8493-3f814a9b313a",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "1e91e889-0917-41e9-91fc-b21b44971342",
+                     "jsondocId": "bcdef900-e9c2-4a92-9ac2-50c918732422",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "428365fa-59d6-41bb-968e-ca9fb6027b73",
+                     "jsondocId": "51ebabaa-b329-4180-9d0c-4d64e59c8a11",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "922c65ae-c04a-486a-afc9-6be66c2e69f6",
+                     "jsondocId": "024798f0-e0ca-4586-9e35-52039bef16e9",
                      "description": "Object not found",
                      "code": "404"
                   }
@@ -551,22 +591,22 @@
                "headers": [],
                "bodyobject": {
                   "mapKeyObject": "",
-                  "jsondocId": "4627b667-2c6d-4d47-86fb-40b630a17152",
+                  "jsondocId": "3b24ea7b-3a04-48ba-a0cd-e45c7bcc9db1",
                   "mapValueObject": "",
                   "map": "",
                   "object": "book",
                   "multiple": "Unknow"
                },
-               "jsondocId": "54282b3d-b69a-439c-9364-ae87518e08ea",
+               "jsondocId": "098c4535-f788-4583-a0b9-e787415020c0",
                "consumes": ["application/json"],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "629345f9-5008-42e6-a4de-58f911e13f7e",
+                  "jsondocId": "669e96e0-9482-43e1-802b-8e89de23c3ee",
                   "mapValueObject": "",
                   "object": "book"
                },
                "pathparameters": [{
-                  "jsondocId": "272690be-3b1f-4827-94e7-0c598bfb052b",
+                  "jsondocId": "df0347f9-a1a0-4e8f-be68-f4f95d9a63ec",
                   "description": "The book id",
                   "name": "id",
                   "allowedvalues": [],
@@ -576,27 +616,27 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "a0a1c2ce-bd58-4b6c-a350-e23ab11a8e91",
+                     "jsondocId": "bd643dea-9f5c-48b1-b524-4f60811f662b",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "e7d4a309-a1b2-4133-9d74-0e4fe69b8caa",
+                     "jsondocId": "8c4666ef-5ded-4415-bf0a-14a3b77359b1",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "6017e745-4968-455c-9e74-a944d757f018",
+                     "jsondocId": "1fbc870e-345b-459f-888a-7dcc624c03f3",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "ddb3eaca-0dd4-4fc2-beff-dc45bf21d53f",
+                     "jsondocId": "7af9ec4e-7c01-4c9b-97de-c7cd0a45c151",
                      "description": "Object not found",
                      "code": "404"
                   },
                   {
-                     "jsondocId": "594db42c-c088-4fd1-acab-bd48c6821051",
+                     "jsondocId": "76099638-2765-4739-aab1-10e704ce28d1",
                      "description": "Object already exist",
                      "code": "409"
                   }
@@ -611,16 +651,16 @@
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "2c4110fe-43d2-4ebf-be8e-29aab88a1c32",
+               "jsondocId": "86d5f310-ab26-44cd-b318-f67dd5904b40",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "94a37a15-bd3f-44a8-bdce-7fca3a0c991d",
+                  "jsondocId": "796c208c-9c62-4758-b65f-1b215fdf5c5e",
                   "mapValueObject": "",
                   "object": "book"
                },
                "pathparameters": [{
-                  "jsondocId": "42426e49-7eb2-4062-a3ca-96bdfb8fc07f",
+                  "jsondocId": "6d0a0edf-7e3d-42b5-9772-270d4ed373af",
                   "description": "The book id",
                   "name": "id",
                   "allowedvalues": [],
@@ -630,22 +670,22 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "5fe97b5e-f4e3-404d-887d-b50f567a0d33",
+                     "jsondocId": "06a62580-1d84-43b1-86e5-57c7db508108",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "4174ed7f-016c-4ed5-b11f-9d9fc53381b1",
+                     "jsondocId": "20a8f791-44e1-4577-b3de-dceb8426c611",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "d379a8d5-df38-4444-913a-8dd50acd8792",
+                     "jsondocId": "50a5817e-bffc-4dad-9656-429f1d9cdbd9",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "778a374f-2a71-457d-99f3-a0dc575fddd5",
+                     "jsondocId": "7e2152c5-0491-4259-8b86-3e74e72890d5",
                      "description": "Object not found",
                      "code": "404"
                   }
@@ -660,16 +700,16 @@
             {
                "headers": [],
                "bodyobject": null,
-               "jsondocId": "12bcba82-67e5-4ed6-953e-74fee921ed72",
+               "jsondocId": "d320f676-d0eb-49e7-9d74-84252de3fee7",
                "consumes": [],
                "response": {
                   "mapKeyObject": "",
-                  "jsondocId": "8a111ddb-c837-4643-8cd0-8a880b37d2f4",
+                  "jsondocId": "87cd923b-0843-48c7-8cae-2075966e89f5",
                   "mapValueObject": "",
                   "object": "book"
                },
                "pathparameters": [{
-                  "jsondocId": "20873116-8b02-4b65-94da-b4648533f9e6",
+                  "jsondocId": "23abbd75-79b2-4074-8fc3-9b409114b666",
                   "description": "The author id",
                   "name": "id",
                   "allowedvalues": [],
@@ -679,22 +719,22 @@
                }],
                "apierrors": [
                   {
-                     "jsondocId": "f05b4266-83cb-4702-932e-cb4795ed4924",
+                     "jsondocId": "500944e5-05be-487a-9a82-d750d2847a79",
                      "description": "Bad Request: missing parameters or bad message format",
                      "code": "400"
                   },
                   {
-                     "jsondocId": "62978269-632c-42d7-9066-36a082e3bb7c",
+                     "jsondocId": "3374ee02-3b9e-4e7c-ab53-11c49d06f3af",
                      "description": "Unauthorized: must be auth",
                      "code": "401"
                   },
                   {
-                     "jsondocId": "c1bec72c-3118-45e4-87bb-a78d655ada2b",
+                     "jsondocId": "85ba2b74-b452-4d1f-8257-3720078a9ec5",
                      "description": "Forbidden: role error",
                      "code": "403"
                   },
                   {
-                     "jsondocId": "2cdc8250-9e5b-4525-9bea-45ea997479b4",
+                     "jsondocId": "b466a19b-e542-4e18-b986-b7385188b425",
                      "description": "Object not found",
                      "code": "404"
                   }
@@ -707,19 +747,19 @@
                "methodName": "listByAuthor"
             }
          ],
-         "jsondocId": "871b1caa-33fe-4f95-b1ae-bcd865897799",
+         "jsondocId": "63b8eb30-8d90-4d4c-9c51-cc0c66bdd9c6",
          "description": "Methods for managing books",
          "name": "book services"
       }
    ],
    "objects": [
       {
-         "jsondocId": "85e630ee-ee81-48ff-97ba-95eb0913536d",
+         "jsondocId": "19af28f5-26fb-49a4-a07a-63d30bb4333a",
          "description": "An author stats",
          "name": "[stats]",
          "fields": [
             {
-               "jsondocId": "8c5a61ae-68aa-4a66-8906-33aa9fffaa6c",
+               "jsondocId": "90c4ef2c-de99-4d40-841b-d95f1ff0709b",
                "description": "The author fullname",
                "presentInResponse": false,
                "mandatory": false,
@@ -732,7 +772,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "d163c5c1-13ce-4b02-98a3-9df1192ab031",
+               "jsondocId": "b4b74e05-3e3c-47ff-ad6e-273a1f1098d1",
                "description": "The number of books created by this author",
                "presentInResponse": false,
                "mandatory": false,
@@ -747,12 +787,12 @@
          ]
       },
       {
-         "jsondocId": "51c9ef48-e138-4eae-9a81-98b036d4b40a",
+         "jsondocId": "fc4d58af-0c61-4cf2-867a-b406f8682212",
          "description": "An author write books",
          "name": "author",
          "fields": [
             {
-               "jsondocId": "f60caa9c-e911-49a9-b15c-531e23863f62",
+               "jsondocId": "de7a1677-5c8f-4ba7-a719-81d7a4248d62",
                "description": "The firstname of the author",
                "presentInResponse": true,
                "mandatory": true,
@@ -765,7 +805,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "1587ef1f-c127-49b0-bd18-9fdaf0818cb4",
+               "jsondocId": "b7a2498f-03fc-4a26-903b-c29e6aa341a5",
                "description": "The lastname of the author",
                "presentInResponse": true,
                "mandatory": true,
@@ -778,7 +818,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "f1d020e5-4951-4a9c-b18b-c9b427ee252e",
+               "jsondocId": "c3f30e44-81d9-4054-a8d2-ea7de31b2ef7",
                "description": "The first and lastname",
                "presentInResponse": true,
                "mandatory": false,
@@ -791,7 +831,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "af6c81f0-27ae-4e10-a51e-956e7dba9979",
+               "jsondocId": "5e059fdb-4765-47b9-b11b-83cd0ca29f7b",
                "description": "Books id written by this author",
                "presentInResponse": true,
                "mandatory": false,
@@ -804,7 +844,7 @@
                "multiple": "true"
             },
             {
-               "jsondocId": "22ef6429-eba2-4b75-bdfb-b3028b19979e",
+               "jsondocId": "1882a2f9-fe58-49fd-915c-a8e6ba906058",
                "description": "The birthday date of the author",
                "presentInResponse": false,
                "mandatory": false,
@@ -817,7 +857,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "44836b40-a9dd-4a3c-8a03-1f56e8c913ed",
+               "jsondocId": "3a957712-4fcd-44ef-af28-bf5de691f9d3",
                "description": null,
                "presentInResponse": false,
                "mandatory": null,
@@ -832,12 +872,12 @@
          ]
       },
       {
-         "jsondocId": "011cd44a-898b-4e44-99df-26ce2261af58",
+         "jsondocId": "4dcfa708-2fc5-4867-bb21-4e4b5661babf",
          "description": "A book available on the store",
          "name": "book",
          "fields": [
             {
-               "jsondocId": "2efb4593-b464-471b-b742-028992e24b13",
+               "jsondocId": "0cf34a42-f117-4cec-8746-723fd20339d0",
                "description": "The author of the book",
                "presentInResponse": true,
                "mandatory": true,
@@ -850,7 +890,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "cef9c3f5-7a2d-4a75-965e-fae9ebc972a1",
+               "jsondocId": "00983c8b-e359-441e-bc07-559b64737b58",
                "description": "The book category",
                "presentInResponse": true,
                "mandatory": true,
@@ -863,7 +903,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "558b3bbe-828a-4312-8061-4d158f3032a2",
+               "jsondocId": "a83fa710-42f9-4f97-aa55-f11e2feaf1fb",
                "description": null,
                "presentInResponse": null,
                "mandatory": null,
@@ -876,7 +916,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "38d07a51-122b-4042-b696-0626d32799d8",
+               "jsondocId": "79375612-9267-4728-9f17-b02e9424e14f",
                "description": "The title of the book",
                "presentInResponse": true,
                "mandatory": true,
@@ -889,7 +929,7 @@
                "multiple": "false"
             },
             {
-               "jsondocId": "bb458712-ba60-4d49-bee9-36764fee6c8a",
+               "jsondocId": "825de7d9-5110-47f3-bab1-cf43bbdc07e7",
                "description": "Year published for this book",
                "presentInResponse": true,
                "mandatory": true,
