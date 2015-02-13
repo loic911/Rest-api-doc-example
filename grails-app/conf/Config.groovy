@@ -88,6 +88,7 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        // grails.resources.debug = true
     }
     production {
         grails.logging.jul.usebridge = false
@@ -103,13 +104,11 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
-
-
-
-
     appenders {
         console name: 'stdout', layout: pattern(conversionPattern: '%d{dd-MM-yyyy HH:mm:ss,SSS} %5p %c{1} - %m%n')
     }
+
+    // debug "org.grails.plugin.resource"
 
     info 'org.restapidoc'
 

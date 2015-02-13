@@ -11,4 +11,4 @@ grails.plugin.location.restapidoc = "../restapidoc" (where ../restapidoc is the 
 
 And remove:
 
-compile ":rest-api-doc:0.1.1"
+compile ":rest-api-doc:0.5"
