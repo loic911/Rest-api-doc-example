@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/restapidoc-example.iml" filepath="$PROJECT_DIR$/restapidoc-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RestApiDoc-example.iml" filepath="$PROJECT_DIR$/RestApiDoc-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RestApiDoc-example-grailsPlugins.iml" filepath="$PROJECT_DIR$/RestApiDoc-example-grailsPlugins.iml" />
       <module fileurl="file://$PROJECT_DIR$/restapidoc-example-grailsPlugins.iml" filepath="$PROJECT_DIR$/restapidoc-example-grailsPlugins.iml" />
     </modules>
   </component>

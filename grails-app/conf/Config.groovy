@@ -125,6 +125,7 @@ log4j = {
            'net.sf.ehcache.hibernate'
 }
 
+grails.plugins.twitterbootstrap.defaultBundle = false
 
 grails.plugins.restapidoc.outputFileGeneration = "restapidoc.json"
 grails.plugins.restapidoc.outputFileReading = "restapidoc.json"

@@ -86,7 +86,8 @@
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="grails-2.3.11" level="application" />
     <orderEntry type="module" module-name="restapidoc-example-grailsPlugins" />
+    <orderEntry type="library" name="grails-2.3.11" level="application" />
+    <orderEntry type="module" module-name="RestApiDoc-example-grailsPlugins" />
   </component>
 </module>

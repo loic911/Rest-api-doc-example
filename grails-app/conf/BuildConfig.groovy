@@ -6,6 +6,8 @@ grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
+grails.views.javascript.library="jquery"
+
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 
 grails.project.fork = [
@@ -60,6 +62,8 @@ grails.project.dependency.resolution = {
 
     plugins {
         // plugins for the build system only
+        runtime ":jquery:1.11.1"
+        runtime ':twitter-bootstrap:3.3.2.1'
         compile ":rest-api-doc:0.6.2"
         build ':tomcat:7.0.54'
         runtime ':hibernate4:4.3.6.1'
@@ -74,7 +78,6 @@ grails.project.dependency.resolution = {
         // plugins needed at runtime but not for compilation
         // runtime ":hibernate:3.6.10.16" // or ":hibernate4:4.1.11.6"
         runtime ":database-migration:1.3.8"
-        //runtime ":jquery:1.10.2.2"
         runtime ":resources:1.2.8"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
