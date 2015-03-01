@@ -7,7 +7,7 @@ grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 
 
-//grails.plugin.location.restapidoc = "../restapidoc"
+grails.plugin.location.restapidoc = "../restapidoc"
 
 
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
@@ -59,7 +59,7 @@ grails.project.dependency.resolution = {
 
     plugins {
         // plugins for the build system only
-        compile ":rest-api-doc:0.6.1"
+       // compile ":rest-api-doc:0.6.5"
         build ':tomcat:8.0.15'
         runtime ':hibernate4:4.3.6.1'
 
